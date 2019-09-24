@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rKq-pD-BHU">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="4AN-Ch-utI">
+            <objects>
+                <navigationController id="rKq-pD-BHU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="e9G-JN-iN9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9x6-ie-ZG9" kind="relationship" relationship="rootViewController" id="Vkv-Be-yEv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O59-Bv-8Pn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-709" y="-1"/>
+        </scene>
+        <!--ログイン-->
+        <scene sceneID="PRw-2a-VcC">
+            <objects>
+                <viewController id="9x6-ie-ZG9" customClass="LoginViewController" customModule="APIClientSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RlL-Dj-U68">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2rY-uO-Pi1">
+                                <rect key="frame" x="32" y="453" width="350" height="44"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="mPI-vY-Wa0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <state key="normal" title="ログイン">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapLoginButton:" destination="9x6-ie-ZG9" eventType="touchUpInside" id="fyh-Cl-g1d"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jaY-Lk-w1L" firstAttribute="trailing" secondItem="2rY-uO-Pi1" secondAttribute="trailing" constant="32" id="O5X-ya-RS8"/>
+                            <constraint firstItem="2rY-uO-Pi1" firstAttribute="leading" secondItem="jaY-Lk-w1L" secondAttribute="leading" constant="32" id="WnB-vp-M0j"/>
+                            <constraint firstItem="2rY-uO-Pi1" firstAttribute="centerY" secondItem="jaY-Lk-w1L" secondAttribute="centerY" id="x1a-Ep-Mjj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="jaY-Lk-w1L"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ログイン" id="kjS-G8-cgs"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8WR-r6-Ffh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-1"/>
+        </scene>
+    </scenes>
+</document>

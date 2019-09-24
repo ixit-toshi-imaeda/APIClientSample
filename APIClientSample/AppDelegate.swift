@@ -11,7 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    /// ログインしているかどうか
+    static var isLoggedIn: Bool {
+        guard let sessionToken = UserDefaults().string(
+            forKey: Constants.UserDefaultsKey.sessionToken) else { return false }
+        return !sessionToken.isEmpty
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
