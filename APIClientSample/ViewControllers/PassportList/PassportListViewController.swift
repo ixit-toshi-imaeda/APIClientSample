@@ -50,7 +50,7 @@ fileprivate extension PassportListViewController {
         let request = Router.getPassports(parameters: parameters)
         let completion = completion
         // リクエスト
-        AF.request(request).responseJSON { response in
+        Alamofire.request(request).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)

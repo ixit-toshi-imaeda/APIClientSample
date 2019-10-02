@@ -60,7 +60,7 @@ fileprivate extension LoginViewController {
         let request = Router.login(parameters: parameters)
         let completion = completion
         let failed = failed
-        AF.request(request).responseJSON { response in
+        Alamofire.request(request).responseJSON { response in
             switch response.result {
             case .success(let value):
                 let json = JSON(value)

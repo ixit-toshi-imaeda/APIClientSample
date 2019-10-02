@@ -6,6 +6,8 @@ target 'APIClientSample' do
   use_frameworks!
 
   # Pods for APIClientSample
-  pod 'ObjectMapper', '~> 3.4'
+  pod 'ObjectMapper', '3.4.2'
+  pod 'Alamofire', '4.9.0'
+  pod 'SwiftyJSON', '4.2'
 
 end
